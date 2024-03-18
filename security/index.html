@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="
+		initial-scale=1,
+		maximum-scale=1, minimum-scale=1,
+		width=device-width, height=device-height,
+		target-densitydpi=device-dpi" />
+	<meta name="description"
+		content="Introduction to Computer Security at NYU Paris." />
+	<meta name="author" content="Nadim Kobeissi">
+	<title>CSCI-UA.9480: Introduction to Computer Security</title>
+	<link rel="icon" type="image/png" href="img/favicon.png" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="splash">
+			<div class="splashText">
+				<h1>Introduction to Computer Security<br /><span
+						class="subh1">NYU Paris</span></h1>
+				<hr />
+				<h2>CSCI-UA.9480</h2>
+			</div>
+		</div>
+		<div class="content">
+			<div class="contentSection">
+				<h3>Welcome, Fall 2019 Students!</h3>
+				<p>I believe that computer security is an exciting field that
+					combines computer science, mathematics, global
+					politics, but also a large dose of the human elements of
+					intrigue, curiosity and thinking outside the box. I hope
+					that by the end of this course, you too will develop an
+					interest in what the world of computer security has to
+					offer.</p>
+				<p>I strongly recommend that you bookmark this website for the
+					duration of the course and that you visit it
+					regularly.</p>
+				<p>See you in class,<br />&mdash;<em>Professor Nadim
+						Kobeissi</em></p>
+				<h4>Course Description</h4>
+				<p>Technology increasingly permeates every aspect of our lives,
+					including communication, finance and health. The
+					security of the computer systems that enable these services
+					has become a critical issue. This course will cover
+					basic principles of computer security and security
+					engineering. It will introduce fundamental computer security
+					concepts, principles, and techniques. It will also cover
+					notions of real-world cryptography, the mathematical
+					building blocks that underlie any digital security
+					construction. This course will focus on security from an
+					attacker's perspective (threat modeling) and the defender's
+					perspective (building and deploying secure systems).
+					Specific topics will include operating system security,
+					network security, web security, applied cryptography,
+					security economics and security psychology. Course projects
+					will focus both on writing secure code and exploiting
+					insecure code.</p>
+				<h4>Course Goals</h4>
+				<p>Upon completion of this course, students will be able to:</p>
+				<ul>
+					<li>Understand the principles of the cryptographic
+						constructions underlying modern computer security.</li>
+					<li>Acquire knowledge in important security topics such as
+						operating system security, network security, web
+						security, security economics and security psychology.
+					</li>
+					<li>Write secure code and exploit insecure code from an
+						attacker’s perspective (threat modeling) and the
+						defender’s perspective (building and deploying secure
+						systems).</li>
+				</ul>
+				<h4>Prerequisites</h4>
+				<p>CSCI-UA.0201 (Computer Systems Organization) and experience
+					with web programming. Recommended prerequisite courses
+					include CSCI-UA.0202 (Operating Systems), and
+					CSCI-UA.04809-009 (Computer Networks).</p>
+				<h4>Administrative Links</h4>
+				<ul>
+					<li><strong>Instructor:</strong> Professor <a
+							href="https://nadim.computer">Nadim Kobeissi</a> (<a
+							href="mailto:nk76@nyu.edu">nk76@nyu.edu</a>)</li>
+					<li><strong>Lectures:</strong> Mondays and Wednesdays,
+						4:00pm to 5:15pm. Room 4.06.</li>
+					<li><strong>Recitations:</strong> Mondays, 5:30pm to 7:00pm.
+						Room 4.06.</li>
+					<li><strong>Term Dates:</strong> September 2, 2019 until
+						December 13, 2019.</li>
+					<li><strong>Office Hours:</strong> Email me to make an
+						appointment.</li>
+					<li><strong>Online Resources:</strong> <a
+							href="https://lists.computerscience.paris/mailman/listinfo/security">Mailing
+							List</a>.</li>
+				</ul>
+			</div>
+			<div class="contentSection">
+				<h3>Syllabus and Course Schedule</h3>
+				<p><strong>&rarr;</strong> A <a
+						href="pdf/syllabus/syllabus_fall2019.pdf"
+						target="_blank">PDF copy</a> of the
+					Fall 2019 syllabus is available.</p>
+				<h4>Part 0: Introduction and Threat Modeling</h4>
+				<ul>
+					<li>
+						<strong>0.1</strong>: Introduction and Threat Modeling
+						(<a href="pdf/slides/CSCI-UA.9480%20Session%200.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 1</li>
+							<li><em>Serious Cryptography</em>, Chapter 1</li>
+							<li><em>An Introduction to Approachable Threat
+									Modeling</em></li>
+						</ul>
+					</li>
+				</ul>
+				<h4>Part 1: Cryptography</h4>
+				<ul>
+					<li>
+						<strong>1.1</strong>: One-Way Functions and Hash
+						Functions (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%201.1.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 3</li>
+							<li><em>Security Engineering</em>, Chapter 6</li>
+						</ul>
+					</li>
+					<li>
+						<strong>1.2</strong>: Symmetric Key Encryption (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%201.2.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Serious Cryptography</em>, Chapters 3, 4, 5
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>1.3</strong>: Public Key Cryptography and
+						Randomness (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%201.3.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Serious Cryptography</em>, Chapters 9, 11,
+								12, 2</li>
+						</ul>
+					</li>
+					<li>
+						<strong>1.4</strong>: Transport Layer Security (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%201.4.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Serious Cryptography</em>, Chapter 13</li>
+							<li><em>Let's Encrypt: How It Works</em></li>
+							<li><em>The New Illustrated TLS Connection</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>1.5</strong>: Usable Security and Secure
+						Messaging (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%201.5.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 2</li>
+							<li><em>15 Reasons not to Start Using PGP</em></li>
+							<li><em>State of Knowledge: Secure Messaging</em>
+							</li>
+							<li><em>Automated Verification for Secure Messaging
+									Protocols and their Implementations: A
+									Symbolic and
+									Computational Approach</em></li>
+							<li><em>More is Less, On the End-to-End Security of
+									Group Chats in Signal, WhatsApp and
+									Threema</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>1.6</strong>: Modeling and Verifying
+						Cryptographic Protocols (slides available after class)
+						<ul>
+							<li><em>Verifpal User Manual</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>1.7</strong>: Cryptocurrencies, Blockchains,
+						Smart Contracts (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%201.7.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Bitcoin and Cryptocurrency
+									Technologies</em>, Chapters 1, 2</li>
+							<li><em>The Idea of Smart Contracts</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>1.8</strong>: E-Voting and Other Modern Uses of
+						Cryptography (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%201.8.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>E-Voting Crypto Protocols</em></li>
+							<li><em>The Remote Voting Minefield: from North
+									Carolina to Switzerland</em></li>
+						</ul>
+					</li>
+				</ul>
+				<h4>Part 2: Network Security</h4>
+				<ul>
+					<li>
+						<strong>2.1</strong>: Networking Basics, IP, TCP and DNS
+						(<a href="pdf/slides/CSCI-UA.9480%20Session%202.1.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 21</li>
+							<li><em>An Introduction to Computer Networks</em>,
+								Chapters 1, 22</li>
+							<li><em>An Introduction to Computer Networks</em>,
+								Chapter 7</li>
+							<li><em>How DNSSec Works</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>2.2</strong>: Denial of Service (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%202.2.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 21.2</li>
+							<li><em>Understanding the Mirai Botnet</em></li>
+							<li><em>How Netflix DDoSd Itself to Help Protect the
+									Entire Internet</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>2.3</strong>: Designing Secure Network Systems
+						(<a href="pdf/slides/CSCI-UA.9480%20Session%202.3.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>How does Apple (Privately) Find Your Offline
+									Devices?</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>2.4</strong>: New Secure Protocols (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%202.4.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Noise Explorer</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>Midterm Exam</strong>
+					</li>
+				</ul>
+				<h4>Part 3: Software Security</h4>
+				<ul>
+					<li>
+						<strong>3.1</strong>: Understanding and Preventing
+						Vulnerabilities (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%203.1.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Software Security Knowledge Area</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>3.2</strong>: Control Flow Hijacking (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%203.2.pdf"
+							target="_blank">slides</a> by C&#259;t&#259;lin
+						Hri&#355;cu, used with permission)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 4.4</li>
+							<li><em>Low-level Software Security: Attacks and
+									Defenses</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>3.3</strong>: Systems Security and Isolation (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%203.3.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 4.3</li>
+							<li><em>Security in Ordinary Operating Systems</em>
+							</li>
+							<li><em>Apple T2 Security Chip Overview</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>3.4</strong>: Mobile Security (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%203.4.1.pdf"
+							target="_blank">slides</a> and <a
+							href="pdf/slides/CSCI-UA.9480%20Session%203.4.2.pdf"
+							target="_blank">more slides</a> by John Mitchell and
+						Dan Boneh, used with permission)
+						<ul>
+							<li><em>iOS Security Guide</em></li>
+							<li><em>Android Security: 2017 Year In Review</em>
+							</li>
+							<li><em>Google Blog: Titan M Makes Pixel 3 our Most
+									Secure Phone Yet</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>3.5</strong>: Meltdown and Spectre: Diving Into
+						Hardware Vulnerabilities (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%203.5.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Meltdown: Reading Kernel Memory from User
+									Space</em></li>
+							<li><em>Spectre Attacks: Exploiting Speculative
+									Execution</em></li>
+							<li><em>The Mysterious Case of the Linux Page Table
+									Isolation Patches</em></li>
+						</ul>
+					</li>
+				</ul>
+				<h4>Part 4: Web Security</h4>
+				<ul>
+					<li>
+						<strong>4.1</strong>: Browser Security Model (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%204.1.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>OWASP Top 10 - 2017: The Ten Most Critical
+									Web Application Security Risks</em></li>
+							<li><em>Browser Security Handbook</em>, part 1</li>
+							<li><em>Browser Security Handbook</em>, part 2</li>
+						</ul>
+					</li>
+					<li>
+						<strong>4.2</strong>: Web Application Security (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%204.2.pdf"
+							target="_blank">slides</a> by Alex Inf&uuml;hr, used
+						with permission)
+						<ul>
+							<li><em>Introduction to Cross-Site Scripting</em>
+							</li>
+							<li><em>Password Storage Cheat Sheet</em></li>
+							<li><em>Why Don't we Follow Password Security Best
+									Practices?</em></li>
+							<li><em>The <code>unescape()</code> Room</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>4.3</strong>: Hybrid Runtimes: Electron and
+						Node.js (the reading is the slides)
+						<ul>
+							<li><em>Electron Security Checklist: A Guide for
+									Developers and Auditors</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>4.4</strong>: Web Privacy (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%204.4.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Tools from the EFF's Tech Team</em></li>
+							<li><em>Europe's New Privacy Law Will Change the
+									Web, and More</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>4.5</strong>: Spam and Abuse (<a
+							href="pdf/slides/CSCI-UA.9480%20Session%204.5.pdf"
+							target="_blank">slides</a>)
+						<ul>
+							<li><em>Click Trajectories: End-to-End Analysis of
+									the Spam Value Chain</em></li>
+						</ul>
+					</li>
+				</ul>
+				<h4>Part 5: Security and Society</h4>
+				<ul>
+					<li>
+						<strong>5.1</strong>: Economics, Ethics and Law (slides
+						available after class)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 7.5</li>
+							<li><em>Vulnerability Reporting FAQ</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>5.2</strong>: Censorship and Mass Surveillance
+						(slides available after class)
+						<ul>
+							<li><em>Security Engineering</em>, Chapter 24.3</li>
+							<li><em>Project Bullrun: Dual EC DRBG</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>Final Exam</strong>
+					</li>
+				</ul>
+			</div>
+			<div class="contentSection">
+				<h3>Materials</h3>
+				<p>Every lecture will be accompanied by outside readings that
+					expand on what is discussed in class or present the
+					same material in a different way. Neither the readings nor
+					the lectures are a replacement for each other; deeply
+					understanding the material will likely require attendance as
+					well as reading. It is possible to read before or
+					after class, depending on your learning style.</p>
+				<p>Aside from the textbooks and materials, students will also
+					require their own personal computer for various parts of
+					this course. Windows, Linux and Mac computers are all
+					suitable.</p>
+				<h4>Textbooks</h4>
+				<ul>
+					<li>
+						<strong><a
+								href="https://nostarch.com/seriouscrypto">Serious
+								Cryptography</a></strong>, No Starch Press,
+						2017. ISBN-13: 978-1593278267.
+						<ul>
+							<li>Jean-Philippe Aumasson.</li>
+							<li><em>Required</em>. Pick up a copy from the NYU
+								bookstore.</li>
+						</ul>
+					</li>
+					<li>
+						<strong><a
+								href="https://www.cl.cam.ac.uk/~rja14/book.html">Security
+								Engineering</a></strong>, Wiley, 2008. ISBN-13:
+						978-0470068526.
+						<ul>
+							<li>Ross Anderson.</li>
+							<li><em>Required</em>. Download a free copy from the
+								link above.</li>
+						</ul>
+					</li>
+					<li>
+						<strong><a href="https://verifpal.com">Verifpal User
+								Manual</a></strong>, Symbolic Software, 2019.
+						ISBN-13: 978-2322161294.
+						<ul>
+							<li>Nadim Kobeissi.</li>
+							<li><em>Required</em>. Download a free copy from the
+								link above.</li>
+						</ul>
+					</li>
+				</ul>
+				<h4>Online Readings</h4>
+				<ul>
+					<li>Kevin Riggle, <a
+							href="pdf/readings/An%20Introduction%20to%20Approachable%20Threat%20Modeling.pdf"
+							target="_blank"><em>An
+								Introduction to Approachable Threat
+								Modeling</em></a>, Increment Magazine, 2018.
+					</li>
+					<li>Let&#39;s Encrypt, <a
+							href="https://letsencrypt.org/how-it-works/"
+							target="_blank"><em>Let&#39;s Encrypt: How
+								It Works</em></a>, Linux Foundation, 2018.</li>
+					<li>Paul C. Kocher, <a
+							href="pdf/readings/Timing%20Attacks%20on%20Implementations%20of%20Diffie-Hellman,%20RSA,%20DSS%20and%20Other%20Systems.pdf"
+							target="_blank"><em>Timing Attacks on
+								Implementations of Diffie-Hellman, RSA, DSS and
+								Other Systems</em></a>,
+						Cryptography Research Inc., 1996.</li>
+					<li>David Brumley and Dan Boneh, <a
+							href="pdf/readings/Remote%20Timing%20Attacks%20are%20Practical.pdf"
+							target="_blank"><em>Remote
+								Timing Attacks are Practical</em></a>, USENIX
+						Security Symposium, 2003.</li>
+					<li>Karthikeyan Bhargavan and Ga&euml;tan Leurent, <a
+							href="pdf/readings/Transcript%20Collision%20Attacks%20Breaking%20Authentication%20in%20TLS,%20IKE%20and%20SSH.pdf"
+							target="_blank"><em>Transcript Collision Attacks:
+								Breaking Authentication in TLS, IKE and
+								SSH</em></a>, Network
+						and Distributed Systems Security Symposium, 2016.</li>
+					<li>Karthikeyan Bhargavan and Ga&euml;tan Leurent, <a
+							href="pdf/readings/On%20the%20Practical%20(In-)Security%20of%2064-bit%20Block%20Ciphers.pdf"
+							target="_blank"><em>On the Practical (In-)Security
+								of 64-bit Block Ciphers</em></a>, ACM Computer
+						and
+						Communications Security, 2016.</li>
+					<li>David Adrian, Karthikeyan Bhargavan, Zakir Durumeric,
+						Pierrick Gaudry, Matthew Green, J. Alex Halderman, Nadia
+						Heninger, Drew Springall, Emmanuel Thom&eacute;, Luke
+						Valenta, Benjamin VanderSloot, Eric Wustrow, Santiago
+						Zanella-B&eacute;guelin and Paul Zimmermann, <a
+							href="pdf/readings/Imperfect%20Forward%20Secrecy%20How%20Diffie-Hellman%20Fails%20in%20Practice.pdf"
+							target="_blank"><em>Imperfect Forward Secrecy: How
+								Diffie-Hellman Fails in Practice</em></a>, ACM
+						Computer and
+						Communications Security, 2015.</li>
+					<li>Nimrod Aviram, Sebastian Schinzel, Juraj Somorovsky,
+						Nadia Heninger, Maik Dankel, Jens Steube, Luke Valenta,
+						David Adrian, J. Alex Halderman, Viktor Dukhovni, Emilia
+						K&auml;sper, Shaanan Cohney, Susanne Engels, Christof
+						Paar and Yuval Shavitt, <a
+							href="pdf/readings/DROWN%20Breaking%20TLS%20using%20SSLv2.pdf"
+							target="_blank"><em>DROWN:
+								Breaking TLS using SSLv2</em></a>, USENIX
+						Security Symposium, 2016.</li>
+					<li>Nik Unger, Sergei Dechand, Joseph Bonneau, Sascha Fahl,
+						Henning Perl, Ian Goldberg and Matthew Smith, <a
+							href="pdf/readings/State%20of%20Knowledge%20Secure%20Messaging.pdf"
+							target="_blank"><em>State of Knowledge: Secure
+								Messaging</em></a>, IEEE Symposium on Security
+						and Privacy, 2015.</li>
+					<li>SecuShare, <a
+							href="pdf/readings/15%20Reasons%20not%20to%20Start%20Using%20PGP.pdf"
+							target="_blank"><em>15
+								Reasons not to
+								Start
+								Using PGP</em></a>.</li>
+					<li>Nadim Kobeissi, Karthikeyan Bhargavan and Bruno
+						Blanchet, <a
+							href="pdf/readings/Automated%20Verification%20for%20Secure%20Messaging%20Protocols%20and%20their%20Implementations%20A%20Symbolic%20and%20Computational%20Approach.pdf"
+							target="_blank"><em>Automated Verification for
+								Secure Messaging Protocols and their
+								Implementations: A Symbolic
+								and Computational Approach</em></a>, IEEE
+						European Symposium on Security and Privacy, 2017.</li>
+					<li>Paul R&ouml;sler, Christina Mainka and Jörg Schwenk, <a
+							href="pdf/readings/More%20is%20Less%20on%20the%20End-to-End%20Security%20of%20Group%20Chats%20in%20Signal,%20WhatsApp%20and%20Threema.pdf"
+							target="_blank"><em>More is Less: On the End-to-End
+								Security of Group Chats in Signal, WhatsApp, and
+								Threema</em></a>,
+						IEEE European Symposium on Security and Privacy, 2018.
+					</li>
+					<li>Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew
+						Miller and Steven Goldfeder, <a
+							href="pdf/readings/Bitcoin%20and%20Cryptocurrency%20Technologies.pdf"
+							target="_blank"><em>Bitcoin and Cryptocurrency
+								Technologies</em></a>, Princeton University
+						Press, 2016.</li>
+					<li>Nick Szabo, <a
+							href="pdf/readings/The%20Idea%20of%20Smart%20Contracts.pdf"
+							target="_blank"><em>The Idea of
+								Smart
+								Contracts</em></a>,
+						University of Amsterdam, 1997.</li>
+					<li>Jean-Philippe Aumasson, <a
+							href="pdf/readings/E-Voting%20Crypto%20Protocols.pdf"
+							target="_blank"><em>E-Voting
+								Crypto
+								Protocols</em></a>, Kudelski Security, 2018.
+					</li>
+					<li>Bryan Ford, <a
+							href="pdf/readings/The%20Remote%20Voting%20Minefield%20from%20North%20Carolina%20to%20Switzerland.pdf"
+							target="_blank"><em>The Remote Voting Minefield:
+								from North Carolina to Switzerland</em></a>,
+						EPFL, 2019.</li>
+					<li>Peter L. Dordal, <a
+							href="pdf/readings/An%20Introduction%20to%20Computer%20Networks.pdf"
+							target="_blank"><em>An
+								Introduction to
+								Computer Networks</em></a>, Loyola University
+						Chicago, 2018.</li>
+					<li>Matthew Green, <a
+							href="https://blog.cryptographyengineering.com/2019/06/05/how-does-apple-privately-find-your-offline-devices/"
+							target="_blank"><em>How Does Apple (Privately) Find
+								Your Offline Devices?</em></a>,
+						CryptographyEngineering.com, 2019</li>
+					<li>Nadim Kobeissi, <a
+							href="https://eprint.iacr.org/2018/1121"
+							target="_blank"><em>An Analysis of the ProtonMail
+								Cryptographic Architecture</em></a>, IACR ePrint
+						Archive,
+						2018.</li>
+					<li>Cloudflare, <a
+							href="pdf/readings/How%20DNSSEC%20Works.pdf"
+							target="_blank"><em>How DNSSEC Works</em></a>.</li>
+					<li>Manos Antonakakis, Tim April, Michael Bailey, Matthew
+						Bernhard, Elie Bursztein, Jaime Cochran, Zakir
+						Durumeric, J. Alex Halderman, Luca Invernizzi, Michalis
+						Kallitsis, Deepak Kumar, Chaz Lever, Zane Ma, Joshua
+						Mason, Damian Menscher, Chad Seaman, Nick Sullivan, Kurt
+						Thomas and Yi Zhou, <a
+							href="pdf/readings/Understanding%20the%20Mirai%20Botnet.pdf"
+							target="_blank"><em>Understanding the Mirai
+								Botnet</em></a>, USENIX Security Symposium,
+						2017.</li>
+					<li>Lily Hay Newman, <a
+							href="pdf/readings/How%20Netflix%20DDoSd%20Itself%20To%20Help%20Protect%20the%20Entire%20Internet.pdf"
+							target="_blank"><em>How
+								Netflix DDoS&#39;d Itself to Help Protect the
+								Entire Internet</em></a>, WIRED
+						Magazine, 2017.</li>
+					<li>Stanford University Applied Cryptography Group, <a
+							href="pdf/readings/Security%20in%20Ordinary%20Operating%20Systems.pdf"
+							target="
+						 _blank"><em>Security
+								in Ordinary Operating Systems</em></a>, Stanford
+						University.</li>
+					<li>Apple Inc., <a
+							href="pdf/readings/iOS%20Security%20Guide.pdf"
+							target="_blank"><em>iOS Security Guide</em></a>,
+						Apple Inc.,
+						2018.</li>
+					<li>Apple Inc., <a
+							href="pdf/readings/Apple%20T2%20Security%20Chip%20Overview.pdf"
+							target="_blank"><em>Apple T2
+								Security
+								Chip
+								Overview</em></a>, Apple Inc., 2018.</li>
+					<li>Android Team, <a
+							href="pdf/readings/Android%20Security%202017%20Year%20in%20Review.pdf"
+							target="_blank"><em>Android
+								Security:
+								2017 Year in Review</em></a>, Google Inc., 2018.
+					</li>
+					<li>Xiaowen Xin, <a
+							href="https://www.blog.google/products/pixel/titan-m-makes-pixel-3-our-most-secure-phone-yet/"
+							target="_blank"><em>Google Blog: Titan M Makes Pixel
+								3 our Most Secure Phone Yet</em></a>, Google
+						Inc., 2018.</li>
+					<li>Moritz Lipp, Michael Schwarz, Daniel Gruss, Thomas
+						Prescher, Werner Haas, Anders Fogh, Jann Horn, Stefan
+						Mangard, Paul Kocher, Daniel Genkin, Yuval Yarom and
+						Mike Hamburg, <a
+							href="pdf/readings/Meltdown%20Reading%20Kernel%20Memory%20from%20User%20Space.pdf"
+							target="_blank"><em>Meltdown: Reading Kernel Memory
+								from User Space</em></a>, USENIX Security
+						Symposium, 2018.</li>
+					<li>Paul Kocher, Jann Horn, Anders Fogh, Daniel Genkin,
+						Daniel Gruss, Werner Haas, Mike Hamburg, Moritz Lipp,
+						Stefan Mangard, Thomas Prescher, Michael Schwarz and
+						Yuval Yarom, <a
+							href="pdf/readings/Spectre%20Attacks%20Exploiting%20Speculative%20Execution.pdf"
+							target="_blank"><em>Spectre Attacks: Exploiting
+								Speculative Execution</em></a>, IEEE Symposium
+						on Security and
+						Privacy, 2019.</li>
+					<li>"dw", <a
+							href="pdf/readings/The%20Mysterious%20Case%20of%20the%20Linux%20Page%20Table%20Isolation%20Patches.pdf"
+							target="_blank"><em>The Mysterious Case of the Linux
+								Page Table Isolation Patches</em></a>,
+						sweetness.hmmz.org.</li>
+					<li>Frank Piessens, <a
+							href="pdf/readings/Software%20Security%20Knowledge%20Area.pdf"
+							target="_blank"><em>Software
+								Security
+								Knowledge Area</em></a>, University of Bristol
+						Cyber Security
+						Group,
+						2018.</li>
+					<li>Úlfar Erlingsson, <a
+							href="pdf/readings/Low-level%20Software%20Security%20Attacks%20and%20Defenses.pdf"
+							target="_blank"><em>Low-level
+								Software Security: Attacks and
+								Defenses</em></a>, Microsoft Research and
+						Reykjavík
+						University, 2007.</li>
+					<li>OWASP, <a
+							href="https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet"
+							target="_blank"><em>Password
+								Storage Cheat Sheet</em></a>, OWASP, 2018.</li>
+					<li>Emily Cain, <a
+							href="pdf/readings/Why%20Dont%20we%20Follow%20Password%20Security%20Best%20Practices.pdf"
+							target="_blank"><em>Why
+								Don&#39;t we Follow Password Security Best
+								Practices?</em></a>, Increment
+						Magazine,
+						2018.</li>
+					<li>Luca Carettoni, <a
+							href="pdf/readings/Electron%20Security%20Checklist%20A%20Guide%20for%20Developers%20and%20Auditors.pdf"
+							target="_blank"><em>Electron
+								Security Checklist: A Guide for Developers and
+								Auditors</em></a>, Doyensec, 2017.</li>
+					<li>EFF Tech Team, <a href="https://www.eff.org/pages/tools"
+							target="_blank"><em>Tools from the EFF&#39;s Tech
+								Team</em></a>, Electronic Frontier Foundation,
+						2018.</li>
+					<li>Nitasha Tiku, <a
+							href="https://www.wired.com/story/europes-new-privacy-law-will-change-the-web-and-more/"
+							target="_blank">Europe&#39;s New Privacy Law Will
+							Change the Web, and More</a>, WIRED Magazine, 2018.
+					</li>
+					<li>OWASP, <a
+							href="pdf/readings/OWASP%20Top%2010%20-%202017.pdf"
+							target="_blank"><em>OWASP Top 10 - 2017: The Ten
+								Most
+								Critical
+								Web Application Security Risks</em></a>, OWASP,
+						2017.</li>
+					<li>Google Application Security, <a
+							href="https://www.google.com/about/appsecurity/learning/xss/index.html"
+							target="_blank"><em>Introduction
+								to Cross-Site Scripting</em></a>, Google Inc.
+					</li>
+					<li>Michal Zalewski, <a
+							href="https://code.google.com/archive/p/browsersec/wikis/Part1.wiki"
+							target="_blank"><em>Browser
+								Security Handbook, part 1</em></a>, Google Inc.,
+						2009.</li>
+					<li>Michal Zalewski, <a
+							href="https://code.google.com/archive/p/browsersec/wikis/Part2.wiki"
+							target="_blank"><em>Browser
+								Security Handbook, part 2</em></a>, Google Inc.,
+						2009.</li>
+					<li>Kirill Levchenko, Andreas Pitsillidis, Neha Chachra,
+						Brandon
+						Enright,
+						Márk Félegyházi, Chris Grier, Tristan Halvorson, Chris
+						Kanich, Christian Kreibich, He Liu, Damon McCoy,
+						Nicholas
+						Weaver, Vern Paxson, Geoffrey M. Voelker, Stefan Savage,
+						<a href="pdf/readings/Click%20Trajectories%20End-to-End%20Analysis%20of%20the%20Spam%20Value%20Chain.pdf"
+							target="_blank"><em>Click Trajectories: End-to-End
+								Analysis of the Spam Value Chain</em></a>, IEEE
+						Symposium on
+						Security and Privacy, 2011.</li>
+					<li>Kurt Thomas, Danny Yuxing Huang, David Wang, Elie
+						Bursztein, Chris
+						Grier, Thomas J. Holt, Christopher Kruegel, Damon McCoy,
+						Stefan Savage, Giovanni Vigna, <a
+							href="pdf/readings/Framing%20Dependencies%20Introduced%20by%20Underground%20Commoditization.pdf"
+							target="_blank"><em>Framing Dependencies Introduced
+								by Underground Commoditization</em></a>,
+						Workshop on the
+						Economics of Information Security, 2015.</li>
+					<li>Coder&#39;s Rights Project, <a
+							href="pdf/readings/Vulnerability%20Reporting%20FAQ.pdf"
+							target="_blank"><em>Vulnerability
+								Reporting FAQ</em></a>, Electronic Frontier
+						Foundation.</li>
+					<li>Daniel J. Bernstein, Tanja Lange, Ruben Niederhagen, <a
+							href="http://projectbullrun.org/dual-ec/index.html"
+							target="_blank"><em>Project Bullrun: Dual EC
+								DRBG</em></a>, Projectbullrun.org, 2015.</li>
+				</ul>
+				<h4>Interactive Learning Tools</h4>
+				<ul>
+					<li><a href="https://tls13.ulfheim.net/">The New Illustrated
+							TLS Connection</a>: Every byte of a TLS connection
+						explained and reproduced.</li>
+					<li><a href="https://verifpal.com">Verifpal</a>:
+						Cryptographic protocol analysis for students and
+						engineers.</li>
+					<li><a href="https://noiseexplorer.com">Noise Explorer</a>:
+						an online engine for reasoning about Noise Protocol
+						Framework Handshake Patterns.</li>
+					<li><a href="https://unescape-room.jobertabma.nl/">The
+							<code>unescape()</code> Room</a>: Cross-Site
+						Scripting (XSS) challenges.</li>
+				</ul>
+			</div>
+			<div class="contentSection">
+				<h3>Assignments</h3>
+				<p>Problem Sets are scheduled evenly throughout the course to
+					help you assess your understanding of the material
+					thus far. Recitations give you chances to get real-world
+					experience in designing and breaking digital
+					security systems.</p>
+				<h4>Problem Sets</h4>
+				<ul>
+					<li><a
+							href="https://drive.google.com/open?id=1RRQjCSoy2wXNKC7iZ_WK4pNFl6rtPe8MXlSue4KYl0c">Problem
+							Set 1</a> -
+						due October 2 before class.</li>
+					<li><a
+							href="https://drive.google.com/open?id=1kYXwVXi-kJJ00_A5g3Rzkq_6eYgnEPCl-77I5PeWPgY">Problem
+							Set 2</a> -
+						due November 13 before class.</li>
+					<li><a
+							href="https://drive.google.com/open?id=1S4146WG-qlAj5kBRd0SWChh2hf8mdIsScI4wEohBLyA">Problem
+							Set 3</a> -
+						due November 27 before class.</li>
+				</ul>
+				<h4>Recitation Example 1: Designing and Breaking Cryptographic
+					Protocols</h4>
+				<p>Designing your own secure
+					messaging protocol is a challenging task, full of
+					opportunities to learn and experiment. Your professor will
+					be working closely with you to help you determine how
+					such systems can be constructed. Then, it's time for you to
+					jump to the other side and try to break the systems
+					designed by your peers!</p>
+				<h5>Part 1: Designing Your Own Secure Messaging Protocol</h5>
+				<p>In this first practical assignment, you will have the
+					exciting opportunity to design your very own secure
+					messaging protocol. Your protocol must offer end-to-end
+					encryption between two principals, Alice and Bob, while
+					guaranteeing:</p>
+				<ul>
+					<li><strong>Secrecy</strong>: A message sent between Alice
+						and Bob can only be decrypted between these principals.
+					</li>
+					<li><strong>Authenticity</strong>: If Alice receive an
+						apparently valid message from Bob, then Bob must have
+						sent
+						this message to Alice.</li>
+					<li><strong>Replay attack resistance</strong>: If Alice
+						receives a valid message from Bob, the attacker cannot
+						replay that same ciphertext to Alice at a later time.
+					</li>
+				</ul>
+				<p>Additionally, your protocol could also include the following
+					optional properties:</p>
+				<ul>
+					<li><strong>Indistinguishability</strong>: If Alice randomly
+						chooses between two messages of the same size and
+						sends only one to Bob, an attacker cannot determine
+						which message was sent.</li>
+					<li><strong>Forward secrecy</strong>: If Alice sends a
+						message to Bob and Alice's key state at the time of this
+						message is subsequently compromised, all previous
+						messages retain their Secrecy property.</li>
+					<li><strong>Future secrecy</strong>: If Alice sends a first
+						message to Bob, receives a reply from Bob, and then
+						sends a second message to Bob, Alice's second message
+						remains secret even if her key state for the first
+						message
+						is compromised.</li>
+				</ul>
+				<h5>Part 2: Finding Weaknesses in Secure Messaging Protocols
+				</h5>
+				<p>In the second stage of this practical assignment, submitted
+					secure messaging protocols will be anonymized,
+					shuffled and then reviewed by your peers. You too will
+					review a peer's protocol and try to find weaknesses, bugs
+					or outright breaks.</p>
+				<h5>Part 3: Understanding the General Practice of Implementing
+					Cryptographic Protocols</h5>
+				<p>In the final stage of this practical assignment, we will
+					choose a proposed secure messaging protocol and discuss
+					its implementation. What are the elements we must consider
+					when turning this protocol into code? How do we design
+					the API? How do we manage the protocol's internal state?</p>
+				<p>The final result of your participation in all three parts
+					will be a hands-on experience in designing, breaking,
+					and planning the software architecture of secure messaging
+					protocols and systems.</p>
+				<h4>Recitation Example 2: Hunting for Bugs in Web Applications
+				</h4>
+				<p>Despite the fact that today's
+					web applications are indispensable in our daily
+					lives, many different kinds of bugs, errors and weaknesses
+					can exist in their programming. In this practical
+					assignment, you will audit a web application written
+					specifically for this class and attempt to find and exploit
+					five different bugs representing each of the types described
+					above. Successfully exploiting all five bugs will
+					grant you a perfect score.</p>
+				<p>Here are just a few different types of bugs that occur in web
+					applications:</p>
+				<ul>
+					<li><strong>Cross-site scripting (XSS)</strong>: a type of
+						injection, in which malicious scripts are injected into
+						otherwise benign and trusted websites. XSS attacks occur
+						when an attacker uses a web application to send
+						malicious code, generally in the form of a browser side
+						script, to a different end user.</li>
+					<li><strong>Cross-site request forgery (XSRF)</strong>: an
+						attack that forces an end user to execute unwanted
+						actions on a web application in which they're currently
+						authenticated. CSRF attacks specifically target
+						state-changing requests, not theft of data, since the
+						attacker has no way to see the response to the forged
+						request. With a little help of social engineering (such
+						as sending a link via email or chat), an attacker may
+						trick the users of a web application into executing
+						actions of the attacker's choosing.</li>
+					<li><strong>Bad cryptography</strong>: a web application
+						could use insufficient or outdated cryptographic
+						constructions in order to protect user data. This can
+						lead to passive attackers obtaining privileged
+						information
+						out of publicly available tokens.</li>
+					<li><strong>Flawed authentication logic</strong>: a web
+						application could neglect to impose restrictions on its
+						login pages, which could lead to forced authentication
+						through anything from brute force to crafting invalid
+						input values that force the application to authenticate
+						the user.</li>
+					<li><strong>Injection</strong>: while XSS is a form of
+						client-side injection, there also exist "server-side"
+						injections that could permanently alter a web
+						application's database, resulting in more severe
+						consequences that
+						could range from permanent database corruption to
+						permanent alterations of key web application code or
+						content.</li>
+				</ul>
+			</div>
+			<div class="contentSection">
+				<h3>Academic Honesty</h3>
+				<p>At NYU, a commitment to excellence, fairness, honesty, and
+					respect within and outside the classroom is essential to
+					maintaining the integrity of our community. Plagiarism is
+					defined as presenting others' work without adequate
+					acknowledgement of its source, as though it were one’s own. 
+					Plagiarism is a form of fraud.  We all stand on the
+					shoulders of others, and we must give credit to the creators
+					of the works that we incorporate into products that we call
+					our own. Some examples of plagiarism:</p>
+				<ul>
+					<li>A sequence of words incorporated without quotation marks
+						or an unacknowledged passage paraphrased from another's
+						work.</li>
+					<li>The use of ideas, sound recordings, computer data or
+						images created by others as though it were one’s own.
+					</li>
+					<li>Submitting evaluations of group members’ work for an
+						assigned group project which misrepresent the work that
+						was performed by another group member.</li>
+					<li>Altering or forging academic documents, including but
+						not limited to admissions materials, academic records,
+						grade reports, add/drop forms, course registration
+						forms, etc.</li>
+				</ul>
+				<p>Furthermore, my courses have a <strong><em>zero
+							tolerance</em> policy for cheating</strong>. Any
+					instance of cheating will result in an immediate,
+					non-negotiable grade of 0 on the pertinent assignment and a
+					report to the university faculty:</p>
+				<ul>
+					<li>Your code has to be your own. No copying code (or
+						rewriting it line by line based on someone else's code)
+						will be tolerated.</li>
+					<li>Any sharing of any answers on any assignment is
+						considered cheating.</li>
+					<li>Coaching another student by helping them writing their
+						answers line by line is also cheating.</li>
+					<li>Copying answers or code from the Internet or hiring
+						someone to write your answers for you is cheating.</li>
+				</ul>
+				<p>Explaining how to use systems or tools and helping others
+					with high-level design issues is not cheating.</p>
+				<p>For further information, students are encouraged to check <a
+						href="https://nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html">NYU's
+						Academic Integrity Policy</a>.</p>
+			</div>
+		</div>
+		<div class="footer">
+			<p>
+				<strong>Last Updated:</strong> August 30, 2019.
+				<br />
+				<strong>License:</strong> <span>CSCI-UA.9480: Introduction to
+					Computer
+					Security</span> by <a>Nadim
+					Kobeissi</a> is licensed under a <a rel="license"
+					href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+					Commons Attribution-ShareAlike 4.0 International
+					License</a>.
+			</p>
+		</div>
+	</div>
+	<script>
+		var sc_project = 11935328;
+		var sc_invisible = 1;
+		var sc_security = "10195c43";
+		var sc_https = 1;
+		var sc_remove_link = 1;
+	</script>
+	<script src="https://www.statcounter.com/counter/counter.js"></script>
+	<noscript>
+		<div class="statcounter"><img class="statcounter"
+				src="https://c.statcounter.com/11935328/0/10195c43/1/" alt="">
+		</div>
+	</noscript>
+</body>
+
+</html>
